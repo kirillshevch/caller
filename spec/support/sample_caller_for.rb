@@ -3,7 +3,7 @@ class SampleCallerFor
 
   caller_for :define
 
-  def define
+  def define(text)
     text
   end
 end

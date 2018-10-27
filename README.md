@@ -80,7 +80,7 @@ class Printer
   end
 
   def print
-    p @text
+    @text
   end
 end
 

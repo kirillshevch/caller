@@ -1,8 +1,10 @@
 # Caller
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/caller`. To experiment with that code, run `bin/console` for an interactive prompt.
+Gem which helps initialize class instance with `.call` method.
 
-TODO: Delete this and the text above, and describe your gem
+```
+.call(*args) => #new(*args).call
+```
 
 ## Installation
 
@@ -22,7 +24,68 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Do you have some code like this?
+
+```ruby
+module Service
+  def call(*args)
+    new(*args).call
+  end
+end
+
+class Printer
+  extend Service
+
+  def initialize(text)
+    @text = text
+  end
+
+  def call
+    @text
+  end
+end
+```
+
+
+Let's replace it with `caller`
+
+```ruby
+class Printer
+  extend Caller
+
+  def initialize(text)
+    @text = text
+  end
+
+  def call
+    @text
+  end
+end
+
+Printer.call('Say caller')
+```
+
+## caller_for
+
+Assign other alias for the constructor with `caller_for` method
+
+```ruby
+class Printer
+  extend Caller
+
+  caller_for :print
+
+  def initialize(text)
+    @text = text
+  end
+
+  def print
+    p @text
+  end
+end
+
+Printer.print('Say caller')
+```
 
 ## Development
 
@@ -32,7 +95,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kirillweb/caller.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kirillshevch/caller.
 
 ## License
 

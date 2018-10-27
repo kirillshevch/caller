@@ -53,12 +53,8 @@ Let's replace it with `caller`
 class Printer
   extend Caller
 
-  def initialize(text)
-    @text = text
-  end
-
-  def call
-    @text
+  def call(text)
+    text
   end
 end
 
@@ -75,12 +71,8 @@ class Printer
 
   caller_for :print
 
-  def initialize(text)
-    @text = text
-  end
-
-  def print
-    @text
+  def print(text)
+    text
   end
 end
 

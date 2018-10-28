@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kirill Shevchenko']
   spec.email         = ['hello@kirillshevch.com']
 
-  spec.summary       = '.call(*args) => #new(*args).call'
+  spec.summary       = '.call(*args) => #new.call(*args)'
   spec.description   = 'Initialize class instance with .call method'
   spec.homepage      = 'https://github.com/kirillshevch/caller'
   spec.license       = 'MIT'

@@ -1,5 +1,4 @@
 require 'caller/version'
-require 'byebug'
 
 module Caller
   def caller_for(*callers_methods)

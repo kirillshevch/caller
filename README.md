@@ -3,7 +3,7 @@
 Gem which helps initialize class instance with `.call` method.
 
 ```
-.call(*args) => #new(*args).call
+.call(*args) => #new.call(*args)
 ```
 
 ## Installation
@@ -63,7 +63,7 @@ Printer.call('Say caller')
 
 ## caller_for
 
-Assign other alias for the constructor with `caller_for` method
+Assiign other alias for the constructor with `caller_for` method
 
 ```ruby
 class Printer

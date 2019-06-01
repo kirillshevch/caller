@@ -63,7 +63,7 @@ Printer.call('Say caller')
 
 ## caller_for
 
-Assiign other alias for the constructor with `caller_for` method
+Assign other alias for the constructor with `caller_for` method
 
 ```ruby
 class Printer

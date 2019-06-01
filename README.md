@@ -29,7 +29,7 @@ Do you have some code like this?
 ```ruby
 module Service
   def call(*args)
-    new.call(*args)
+    new(*args).call
   end
 end
 
